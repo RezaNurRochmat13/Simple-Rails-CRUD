@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" %>
+  </head>
+
+  <body>
+  <div class="container">
+        <table class="table table-bordered table-hover">
+            <thead>
+                <tr>
+                    <th>Books Name</th>
+                    <th>Books Writer</th>
+                    <th>Books Publisher</th>
+                    <th>Books Description</th>
+                </tr>
+            </thead>
+
+            <tbody>
+           <% @book.each do |b| %>
+                <tr>
+                    <td><%= b.books_name %></td>
+                    <td>nsjsasa</td>
+                    <td>sasasa</td>
+                    <td>asasa</td>
+                </tr>
+                <%end%>
+            </tbody>
+        </table>
+    </div>
+  </body>
+</html>
