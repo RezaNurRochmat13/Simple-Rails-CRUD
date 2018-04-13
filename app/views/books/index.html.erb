@@ -6,32 +6,43 @@
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-    <%= stylesheet_link_tag href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" %>
+    <%= stylesheet_link_tag href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"%>
   </head>
 
   <body>
   <div class="container">
-        <table class="table table-bordered table-hover">
-            <thead>
-                <tr>
-                    <th>Books Name</th>
-                    <th>Books Writer</th>
-                    <th>Books Publisher</th>
-                    <th>Books Description</th>
-                </tr>
-            </thead>
+    <div class="panel panel-default">
+    <div class="panel-heading">List Books</div>
+        <div class="panel-body">
+            <a class="btn btn-primary btn-sm tambah">Add New Books</a>
+                <table class="table table-bordered table-hover">
+                    <thead>
+                        <tr>
+                            <th>Books Name</th>
+                            <th>Books Writer</th>
+                            <th>Books Publisher</th>
+                            <th>Books Description</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
 
-            <tbody>
-           <% @book.each do |b| %>
-                <tr>
-                    <td><%= b.books_name %></td>
-                    <td>nsjsasa</td>
-                    <td>sasasa</td>
-                    <td>asasa</td>
-                </tr>
-                <%end%>
-            </tbody>
-        </table>
+                    <tbody>
+                    <% @book.each do |b| %>
+                        <tr>
+                            <td><%= b.books_name %></td>
+                            <td><%= b.books_writer%></td>
+                            <td><%= b.books_publisher%></td>
+                            <td><%= b.books_description%></td>
+                            <td>
+                                <a class="btn btn-info btn-sm">Edit Books</a>
+                                <a class="btn btn-danger btn-sm">Delete Books</a>
+                            </td>
+                        </tr>
+                        <%end%>
+                    </tbody>
+                </table>
+            </div>
+        </div>
     </div>
   </body>
 </html>
